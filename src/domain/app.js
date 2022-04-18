@@ -1,14 +1,16 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-import { sequelize } from "./model.js";
-import { getProfile } from "./middleware/getProfile.js";
+import "./init-relationships.js";
+
+import { getProfile } from "../infrastructure/middleware/getProfile.js";
+import { seqInstance } from "../infrastructure/db/index.js";
 
 const app = express();
 
 app.use(bodyParser.json());
-app.set("sequelize", sequelize);
-app.set("models", sequelize.models);
+app.set("sequelize", seqInstance);
+app.set("models", seqInstance.models);
 
 /**
  * FIX ME!
