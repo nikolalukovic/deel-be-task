@@ -3,11 +3,11 @@ import { getContract } from "../middleware/getContract.js";
 import { getContracts } from "../middleware/getContracts.js";
 
 const mapRoutes = (app) => {
-  app.get("/contracts", getProfile, getContracts, async (req, res) => {
+  app.get("/contracts", getProfile, getContracts, (req, res) => {
     res.json(req.contracts);
   });
 
-  app.get("/contracts/:id", getProfile, getContract, async (req, res) => {
+  app.get("/contracts/:id", getProfile, getContract, (req, res) => {
     if (!req.contract) {
       return res.status(404).end();
     }
