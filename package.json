@@ -7,17 +7,16 @@
     "seed": "node ./scripts/seedDb.js"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "4.17.1",
-    "sequelize": "^6.3.4",
-    "sqlite3": "^4.0.1"
+    "body-parser": "^1.20.0",
+    "express": "4.17.3",
+    "sequelize": "^6.19.0",
+    "sqlite3": "^5.0.4"
   },
   "devDependencies": {
-    "concurrently": "4.1.0",
-    "nodemon": "1.19.1"
+    "concurrently": "7.1.0",
+    "nodemon": "2.0.15"
   },
   "engines": {
-    "node": ">=10.16.3"
-  },
-  "engineStrict": true
+    "node": "v17.7.2"
+  }
 }
