@@ -6,12 +6,12 @@ const getContract = async (req, res, next) => {
   const { id: contractId } = req.params;
   const { id: profileId } = req.profile;
 
-  const contract = await seqInstance.query(
+  const result = await seqInstance.query(
     "select * from Contracts where Id = :contractId AND (ClientId = :profileId OR ContractorId = :profileId)",
     { replacements: { contractId, profileId }, type: QueryTypes.SELECT }
   );
 
-  req.contract = contract;
+  req.contract = result[0];
 
   next();
 };
