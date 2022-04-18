@@ -1,6 +1,6 @@
 import { getProfile } from "../../../infrastructure/middleware/getProfile.js";
-import { getContract } from "../middleware/getContract.js";
-import { getContracts } from "../middleware/getContracts.js";
+import { getContract } from "../middleware/get-contract.js";
+import { getContracts } from "../middleware/get-contracts.js";
 
 const mapRoutes = (app) => {
   app.get("/contracts", getProfile, getContracts, (req, res) => {

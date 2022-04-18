@@ -1,7 +1,7 @@
 import { seqInstance } from "../../../infrastructure/db/index.js";
-import { getTotalToPayByProfileId } from "../../jobs/services/getTotalToPay.js";
-import { getBalanceById } from "../services/getProfile.js";
-import { updateBalance } from "../services/updateProfile.js";
+import { getTotalToPayByProfileId } from "../../jobs/services/get-total-to-pay.js";
+import { getBalanceById } from "../services/get-profile.js";
+import { updateBalance } from "../services/update-profile.js";
 
 const depositToBalance = async (req, res, next) => {
   const { userId } = req.params;

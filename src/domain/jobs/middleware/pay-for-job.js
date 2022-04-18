@@ -4,10 +4,10 @@ import { seqInstance } from "../../../infrastructure/db/index.js";
 import {
   getContractorByJobId,
   getProfileById,
-} from "../../identity/services/getProfile.js";
-import { updateBalance } from "../../identity/services/updateProfile.js";
-import { getJobById } from "../services/getJob.js";
-import { setJobPaid } from "../services/updateJob.js";
+} from "../../identity/services/get-profile.js";
+import { updateBalance } from "../../identity/services/update-profile.js";
+import { getJobById } from "../services/get-job.js";
+import { setJobPaid } from "../services/update-job.js";
 
 const payForJob = async (req, res, next) => {
   const { id: profileId } = req.profile;

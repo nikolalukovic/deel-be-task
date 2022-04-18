@@ -1,6 +1,6 @@
 import { getProfile } from "../../../infrastructure/middleware/getProfile.js";
-import { getUnpaidJobs } from "../middleware/getUnpaidJobs.js";
-import { payForJob } from "../middleware/payForJob.js";
+import { getUnpaidJobs } from "../middleware/get-unpaid-jobs.js";
+import { payForJob } from "../middleware/pay-for-job.js";
 
 const mapRoutes = (app) => {
   app.get("/jobs/unpaid", getProfile, getUnpaidJobs, async (req, res) => {
